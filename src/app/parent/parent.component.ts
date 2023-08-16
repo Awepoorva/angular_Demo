@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
   myData = 'Happy Independence day';
+  msgFromChild = '';
 }

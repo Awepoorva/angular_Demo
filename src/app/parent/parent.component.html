@@ -1,2 +1,3 @@
 <p>parent works!</p>
-<child [parentData]="myData"></child>
+<child [parentData]="myData" (childValue)="msgFromChild = $event"></child>
+{{ msgFromChild }}

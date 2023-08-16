@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'child',
@@ -8,4 +8,11 @@ import { Component, Input } from '@angular/core';
 export class ChildComponent {
    @Input('parentData')
    pd:any;
+
+   @Output()
+   public childValue = new EventEmitter();
+
+   emitValue() {
+    this.childValue.emit('Hi Priya');
+  }
 }
